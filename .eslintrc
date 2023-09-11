@@ -1,0 +1,54 @@
+{
+  "plugins": ["react", "prettier", "react-hooks", "module-resolver"],
+  "extends": ["airbnb", "plugin:react/recommended", "prettier"],
+  "parser": "babel-eslint",
+  "env": {
+    "jest": true,
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {},
+      "webpack": {
+        "config": "webpack/webpack.common.js"
+      }
+    }
+  },
+  "rules": {
+    "arrow-body-style": ["error", "as-needed"],
+    "arrow-parens": 0,
+    "class-methods-use-this": 0,
+    "comma-dangle": 0,
+    "import/newline-after-import": [2, { "count": 1 }],
+    "import/no-extraneous-dependencies": [2, { "devDependencies": true }],
+    "import/order": 0,
+    "import/prefer-default-export": 0,
+    "jsx-a11y/click-events-have-key-events": 1,
+    "jsx-a11y/label-has-associated-control": 1,
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/no-static-element-interactions": 1,
+    "object-curly-newline": 0,
+    "operator-linebreak": 0,
+    "max-len": [1, 200, 2, { "ignoreComments": true }],
+    "no-case-declarations": 0,
+    "no-nested-ternary": 0,
+    "no-param-reassign": 0,
+    "no-return-assign": 0,
+    "react-hooks/rules-of-hooks": 2,
+    "react-hooks/exhaustive-deps": 1,
+    "react/destructuring-assignment": 0,
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-fragments": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/no-unknown-property": 2,
+    "react/no-unused-prop-types": 2,
+    "react/prefer-stateless-function": 2,
+    "react/react-in-jsx-scope": 2,
+    "react/sort-comp": 1,
+    "semi": 0,
+    "import/no-cycle": 0,
+    "module-resolver/use-alias": 2
+  }
+}

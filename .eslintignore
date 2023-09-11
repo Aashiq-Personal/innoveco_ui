@@ -1,0 +1,7 @@
+
+public/
+node_modules/
+dist/
+nginx/
+.local/
+vendor/
