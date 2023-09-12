@@ -1,12 +1,22 @@
 import React from 'react';
-import LoginForm from './login';
+import LoginPage from './login';
+import { AuthLayout } from '../layouts';
 
-const Main = () => {
-  return (
-    <div>
-      <LoginForm />
-    </div>
-  );
+const Main = (props) => {
+  const { path } = props;
+  let Content = '';
+
+  switch (path) {
+    case 'login': {
+      Content = (
+        <AuthLayout>
+          <LoginPage />
+        </AuthLayout>
+      );
+      break;
+    }
+  }
+  return Content;
 };
 
 export default Main;

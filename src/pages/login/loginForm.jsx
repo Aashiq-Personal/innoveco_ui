@@ -1,4 +1,4 @@
-import * as z from 'zod';
+// import * as z from 'zod';
 import React from 'react';
 import { BasicSpinner } from '../../components';
 import { loginSchema } from '../../validation/loginSchema';
@@ -21,11 +21,10 @@ const LoginForm = () => {
   const [isButtonLoading, setIsButtonLoading] = useState(false);
 
   const onSubmit = (data) => {
-    console.log('data :>> ', data);
     setIsButtonLoading(true);
     if (
       (data.email === 'sayf@mgt.com' && data.password === 'Sayfmgt@1234') ||
-      (data.email === 'thomas.hampf@gmx.de' && data.password === 'Thomas@1234')
+      (data.email === 'admin@mgt.com' && data.password === 'Admin@1234')
     ) {
       setIsButtonLoading(false);
       toast({
@@ -54,7 +53,7 @@ const LoginForm = () => {
       className="flex flex-col w-full mt-28"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <p className="text-primary text-justify text-h4">Login to Innoveco!</p>
+      <p className="text-primary text-justify text-h4">Login to InnovEcoS!</p>
       <div className="form-control w-full max-w-sm mb-4">
         <label className="label">
           <span className="label-text text-accent">Email Address *</span>
