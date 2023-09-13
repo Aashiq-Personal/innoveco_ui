@@ -1,22 +1,30 @@
 import React from 'react';
 import LoginPage from './login';
-import { AuthLayout } from '../layouts';
+import { AuthLayout, MainLayout } from '../layouts';
 
 const Main = (props) => {
   const { path } = props;
-  let Content = '';
+  let Child = '',
+    isAuth = false,
+    Parent = '';
 
   switch (path) {
     case 'login': {
-      Content = (
-        <AuthLayout>
-          <LoginPage />
-        </AuthLayout>
-      );
+      Child = <LoginPage />;
+      isAuth = true;
+      break;
+    }
+    case 'dashboard': {
+      Child = <LoginPage />;
       break;
     }
   }
-  return Content;
+  Parent = isAuth ? (
+    <AuthLayout>{Child}</AuthLayout>
+  ) : (
+    <MainLayout>{Child}</MainLayout>
+  );
+  return Parent;
 };
 
 export default Main;
